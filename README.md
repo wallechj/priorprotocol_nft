@@ -18,6 +18,10 @@ npm install
 
 打开walletAddress.txt填写钱包地址
 
+```bash
+0x........
+```
+
 运行代码：
 ```bash
 node index.js
