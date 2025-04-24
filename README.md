@@ -2,7 +2,7 @@
 priorprotocol  NFT 定时激活
 
 
-⚙️ Installation
+
 下载代码
 git clone https://github.com/wallechj/priorprotocol_nft.git
 
