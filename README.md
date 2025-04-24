@@ -8,7 +8,7 @@ priorprotocol  NFT 定时激活
 git clone https://github.com/wallechj/priorprotocol_nft.git
 ```
 ```bash
-cd Prior-Testnet-Auto-Bot
+cd priorprotocol_nft
 ```
 
 安装依赖：
