@@ -50,12 +50,6 @@ const checkActivation = async () => {
     'origin': 'https://priornftstake.xyz',
     'priority': 'u=1, i',
     'referer': 'https://priornftstake.xyz/',
-    'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"macOS"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'cross-site',
     'user-agent': getRandomUserAgent()
   };
 
