@@ -1,14 +1,13 @@
 const axios = require('axios');
 const fs = require('fs');
 
-// 获取当前时间与过期时间的时间差，进行倒计时
 const getExpirationTime = (expiresAt) => {
   const expiresAtDate = new Date(expiresAt);
   const now = new Date();
   return expiresAtDate - now;
 };
 
-// 读取 walletAddress.txt 文件中的钱包地址
+
 const getWalletAddress = () => {
   try {
     const data = fs.readFileSync('walletAddress.txt', 'utf8');
@@ -70,9 +69,8 @@ const checkActivation = async () => {
           if (remainingTime <= 0) {
             console.log("激活时间已过期，重新激活。");
             clearInterval(countdown);
-            checkActivation();  // 时间到，重新激活
+            checkActivation();
           } else {
-            // 清除现有页面内容并更新倒计时
             console.clear();
             const hours = Math.floor(remainingTime / (1000 * 60 * 60));
             const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
@@ -86,6 +84,10 @@ const checkActivation = async () => {
       }
     } else {
       console.log("激活失败或未激活。");
+      const randomWaitTime = Math.floor(Math.random() * 5000) + 5000;
+      setTimeout(() => {
+        checkActivation();
+      }, randomWaitTime);
     }
   } catch (error) {
     console.error("请求失败", error);
